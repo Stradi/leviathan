@@ -1,0 +1,19 @@
+{
+  "name": "@leviathan/server",
+  "description": "Backend server for Leviathan",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Batın Evirgen <hi@batin.sh> (https://www.batin.sh)",
+  "homepage": "https://www.github.com/Stradi/leviathan",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/Stradi/leviathan",
+    "directory": "apps/server"
+  },
+  "scripts": {
+    "start": "bun src/index.ts"
+  },
+  "devDependencies": {
+    "@leviathan/tsconfig": "workspace:*"
+  }
+}

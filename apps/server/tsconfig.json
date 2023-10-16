@@ -1,0 +1,6 @@
+{
+  "extends": "@leviathan/tsconfig/bun.json",
+  "compilerOptions": {
+    "typeRoots": ["./node_modules/@leviathan/tsconfig/node_modules"]
+  }
+}

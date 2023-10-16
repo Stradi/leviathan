@@ -1,0 +1,16 @@
+{
+  "name": "@leviathan/tsconfig",
+  "description": "TypeScript configuration files for Leviathan projects.",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Batın Evirgen <hi@batin.sh> (https://www.batin.sh)",
+  "homepage": "https://www.github.com/Stradi/leviathan",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/Stradi/leviathan",
+    "directory": "packages/tsconfig"
+  },
+  "devDependencies": {
+    "bun-types": "^1.0.6"
+  }
+}
