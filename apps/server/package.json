@@ -14,9 +14,11 @@
     "start": "bun src/index.ts"
   },
   "devDependencies": {
-    "@leviathan/tsconfig": "workspace:*"
+    "@leviathan/tsconfig": "workspace:*",
+    "pino-pretty": "^10.2.3"
   },
   "dependencies": {
-    "hono": "^3.7.6"
+    "hono": "^3.7.6",
+    "pino": "^8.16.0"
   }
 }

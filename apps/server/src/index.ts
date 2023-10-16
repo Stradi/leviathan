@@ -1,4 +1,7 @@
 import { bootstrapServer } from './bootstrap';
+import { log } from './utils/logger';
+
+log.info('Starting the Leviathan server');
 
 const honoServer = bootstrapServer();
 const server = Bun.serve({
@@ -6,4 +9,4 @@ const server = Bun.serve({
   port: process.env.PORT || 3001,
 });
 
-console.log(`Leviathan server is listening at http://${server.hostname}:${server.port}`);
+log.info(`Leviathan server is listening at http://${server.hostname}:${server.port}`);
