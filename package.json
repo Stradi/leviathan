@@ -1,0 +1,12 @@
+{
+  "name": "leviathan",
+  "description": "A modern private torrent tracker",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Batın Evirgen <hi@batin.sh> (https://www.batin.sh)",
+  "homepage": "https://www.github.com/Stradi/leviathan",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/Stradi/leviathan"
+  }
+}
