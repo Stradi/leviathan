@@ -15,5 +15,8 @@
   },
   "devDependencies": {
     "@leviathan/tsconfig": "workspace:*"
+  },
+  "dependencies": {
+    "hono": "^3.7.6"
   }
 }

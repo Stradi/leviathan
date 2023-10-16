@@ -8,6 +8,9 @@ importers:
   apps/server:
     specifiers:
       '@leviathan/tsconfig': workspace:*
+      hono: ^3.7.6
+    dependencies:
+      hono: 3.7.6
     devDependencies:
       '@leviathan/tsconfig': link:../../packages/tsconfig
 
@@ -22,3 +25,8 @@ packages:
   /bun-types/1.0.6:
     resolution: {integrity: sha512-5QwynfXiRCRxPW3ZnC0Dv+sHHmctP4SHIuzsRKOWYO0HF/qUpsxQVexoviaxpmwDsF1hoVDDFdc4xUuafOzx1g==}
     dev: true
+
+  /hono/3.7.6:
+    resolution: {integrity: sha512-nuLNH9+nV6ojXK6b9I0RGZgdMuLTOXeQPs6xsIw/G5iyT8j8m7Nnx8pTxQprmSmCaEYIPv91rCcq45PQNfW68A==}
+    engines: {node: '>=16.0.0'}
+    dev: false
