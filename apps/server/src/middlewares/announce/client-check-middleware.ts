@@ -6,6 +6,13 @@ const USER_AGENT_REGEX = /(Mozilla|Browser|Chrome|Safari|AppleWebKit|Opera|Links
 
 export default function clientCheckMiddleware(): MiddlewareHandler {
   return async (ctx, next) => {
+    const clientIpAddress = ctx.req.header('X-Bun-IP');
+    if (!clientIpAddress) {
+      throw new TrackerError({
+        message: 'IP Address should be exist',
+      });
+    }
+
     const queries = parseQueryParameters(ctx.req.url);
     if (Object.keys(queries).length < 6) {
       throw new TrackerError({ message: 'At least 6 query params are required' });
