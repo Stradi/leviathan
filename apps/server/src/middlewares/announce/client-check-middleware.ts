@@ -1,11 +1,12 @@
 import { MiddlewareHandler } from 'hono';
 import TrackerError from '../../utils/errors/tracker-error';
+import { parseQueryParameters } from '../../utils/query';
 
 const USER_AGENT_REGEX = /(Mozilla|Browser|Chrome|Safari|AppleWebKit|Opera|Links|Lynx|Bot|Unknown)/i;
 
 export default function clientCheckMiddleware(): MiddlewareHandler {
   return async (ctx, next) => {
-    const queries = ctx.req.query();
+    const queries = parseQueryParameters(ctx.req.url);
     if (Object.keys(queries).length < 6) {
       throw new TrackerError({ message: 'At least 6 query params are required' });
     }

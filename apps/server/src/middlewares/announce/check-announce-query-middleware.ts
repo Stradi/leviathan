@@ -1,5 +1,6 @@
 import { MiddlewareHandler } from 'hono';
 import TrackerError from '../../utils/errors/tracker-error';
+import { parseQueryParameters } from '../../utils/query';
 
 // prettier-ignore
 const BLACKLISTED_PORTS = [
@@ -34,7 +35,9 @@ export default function checkAnnounceQueryMiddleware(): MiddlewareHandler<{
   Variables: AnnounceRequestVariable;
 }> {
   return async (ctx, next) => {
-    const queryParams = ctx.req.query();
+    // ctx.req.query() throws an error. This is probably because info_hash contains non-ascii characters.
+    // Because of that, we just parse the query string ourselves.
+    const queryParams = parseQueryParameters(ctx.req.url);
     const values: Record<string, string | number> = queryParams as any;
 
     // Check if all of the required query parameters are present
